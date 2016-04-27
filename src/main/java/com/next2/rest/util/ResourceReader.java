@@ -16,9 +16,16 @@ public class ResourceReader {
     public String readFromResources(String fileLocation) {
         ClassLoader classLoader = getClass().getClassLoader();
         File file;
+        String filePath = null;
 
-        file = new File(classLoader.getResource(fileLocation).getFile());
-        String filePath = file.getAbsolutePath();
+        try {
+            file = new File(classLoader.getResource(fileLocation).getFile());
+            filePath = file.getAbsolutePath();
+        } catch (NullPointerException e) {
+            log.error("Unable to find the file: " + fileLocation);
+            log.error(e);
+            System.exit(1);
+        }
 
         try {
             String fileAsString = readFile(filePath, StandardCharsets.UTF_8);
@@ -30,12 +37,14 @@ public class ResourceReader {
         return null;
     }
 
-    public Properties getProperties(String propertyFileName) {
+    public Properties getProperties(String propertyFileName) throws NullPointerException{
         Properties prop = new Properties();
         try {
             prop.load(ResourceReader.class.getClassLoader().getResourceAsStream(propertyFileName));
-        } catch (IOException e) {
+        } catch (NullPointerException | IOException e) {
             log.error("Unable to find the properties file: " + propertyFileName);
+            log.error(e);
+            System.exit(1);
         }
         return prop;
     }
