@@ -1,0 +1,12 @@
+[
+    {
+        "is_virtual": true,
+        "name": "Smart order",
+        "market_id": 80
+    },
+    {
+        "country": "SE",
+        "name": "Saxess SE SOX",
+        "market_id": 40
+    }
+]

@@ -1,0 +1,16 @@
+{
+    "country": "SE",
+    "environment": "exttest",
+    "session_key": "1daf682f74ddf4381ca7eb3d672fb2e449459b2d",
+    "private_feed": {
+        "hostname": "priv.api.test.nordnet.se",
+        "encrypted": true,
+        "port": 443
+    },
+    "expires_in": 300,
+    "public_feed": {
+        "hostname": "pub.api.test.nordnet.se",
+        "encrypted": true,
+        "port": 443
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "future_sum": {
+        "currency": "SEK",
+        "value": 0
+    },
+    "own_capital": {
+        "currency": "SEK",
+        "value": 1000000
+    },
+    "account_currency": "SEK",
+    "own_capital_morning": {
+        "currency": "SEK",
+        "value": 1000000
+    },
+    "trading_power": {
+        "currency": "SEK",
+        "value": 1000000
+    },
+    "loan_limit": {
+        "currency": "SEK",
+        "value": 1000000
+    },
+    "pawn_value": {
+        "currency": "SEK",
+        "value": 0
+    },
+    "account_credit": {
+        "currency": "SEK",
+        "value": 0
+    },
+    "full_marketvalue": {
+        "currency": "SEK",
+        "value": 0
+    },
+    "unrealized_future_profit_loss": {
+        "currency": "SEK",
+        "value": 0
+    },
+    "interest": {
+        "currency": "SEK",
+        "value": 0
+    },
+    "collateral": {
+        "currency": "SEK",
+        "value": 0
+    },
+    "account_sum": {
+        "currency": "SEK",
+        "value": 1000000
+    },
+    "forward_sum": {
+        "currency": "SEK",
+        "value": 0
+    }
+}
