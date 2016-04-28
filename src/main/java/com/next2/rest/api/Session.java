@@ -8,7 +8,7 @@ import com.next2.rest.util.ResourceReader;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
-import java.util.Properties;
+import java.util.*;
 
 public class Session {
     public Properties properties;
@@ -37,12 +37,16 @@ public class Session {
 
     public Session(Properties properties) {
         log.info("Initializing a new session with a specified properties file" );
-        log.info(properties.toString());
 
-        String baseUrl  = properties.getProperty("baseurl");
-        String username = properties.getProperty("username");
-        String password = properties.getProperty("password");
-        String pemFile  = properties.getProperty("pemfile");
+        List<String> requiredProperties = new ArrayList<>(
+                Arrays.asList("baseurl", "username", "password", "pemfile"));
+
+        this.throwErrorOnRequiredProperty(properties, requiredProperties);
+
+        String baseUrl  = properties.getProperty(requiredProperties.get(0));
+        String username = properties.getProperty(requiredProperties.get(1));
+        String password = properties.getProperty(requiredProperties.get(2));
+        String pemFile  = properties.getProperty(requiredProperties.get(3));
 
         webTarget = ClientBuilder.newClient().target(baseUrl);
 
@@ -52,5 +56,18 @@ public class Session {
             sessionKey = login.getSessionKey();
         }
         webTarget = webTarget.register(HttpAuthenticationFeature.basic(sessionKey, sessionKey));
+    }
+
+    private void throwErrorOnRequiredProperty(Properties properties, List<String> requiredProperties) {
+        for (String property : requiredProperties) {
+            String p = properties.getProperty(property);
+            if (p == null) {
+                throw new IllegalArgumentException("The property '" + property + "' was not found in the properties file");
+            }
+            if (p.isEmpty()) {
+                throw new IllegalArgumentException("The property '" + property + "' was empty in the properties file");
+            }
+            log.info(property + ": " + p);
+        }
     }
 }
