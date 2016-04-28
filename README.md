@@ -13,8 +13,8 @@ Using this client you will be able to build your own trading bot by acting on ch
 ## Installation
 1. [Register a test account on Nordnet](https://api.test.nordnet.se/account/register)
 2. [Sign in to your test account](https://api.test.nordnet.se/login)
-3. Once signed in, download the .pem file and place it in the root of the `resources` directory
-4. Update `next-test-environment.properties` with your `username`, `password` and `pemfile`
+3. Once signed in, download the .pem file and place it in the root of the `main/java/resources` directory
+4. Update `next-test-environment.properties` with your `username`, `password` and location of your `pemfile`
 5. Run `mvn test` to run integration and unit tests 
 
 ## Examples
