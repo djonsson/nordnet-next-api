@@ -17,5 +17,6 @@ target/
 
 #Custom
 *.log*
+*.json
 src/main/resources/*.properties
 src/main/resources/*.pem

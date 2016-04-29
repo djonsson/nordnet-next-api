@@ -35,7 +35,7 @@ public abstract class Authenticate {
      * 3. Base64 encode the encrypted string.
      *
      * @see <a href="https://api.test.nordnet.se/api-docs/index.html?#!/login/login">Login</a>
-     * @Return Login
+     * @return Login
      */
     public static Login login(WebTarget webTarget, String username, String password, String pemFile) {
         Response response = webTarget.path("login").queryParam("service", "NEXTAPI")
