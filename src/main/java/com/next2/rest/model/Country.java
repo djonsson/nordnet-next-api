@@ -12,7 +12,7 @@ public class Country {
     }
 
     public Country(JSONObject jsonObject) {
-        this.countryCode = jsonObject.getString("country");
+        this.countryCode = jsonObject.getString("country").toUpperCase();
         this.countryName = jsonObject.getString("name");
     }
 

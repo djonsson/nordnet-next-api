@@ -34,4 +34,16 @@ public class IndicatorList {
     public Indicator getIndicatorByIndex(int index) {
         return indicatorList.get(index);
     }
+
+    public List<Indicator> getIndicatorByCountry(Country country) {
+        List<Indicator> indicators = new ArrayList<>();
+        for (Indicator indicator : indicatorList) {
+            if(indicator.country.getCountryCode() != null) {
+                if (indicator.country.getCountryCode().contentEquals(country.getCountryCode())) {
+                    indicators.add(indicator);
+                }
+            }
+        }
+        return indicators;
+    }
 }

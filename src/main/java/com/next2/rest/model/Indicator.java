@@ -8,7 +8,7 @@ public class Indicator {
     String src;
     String identifier;
     String type;
-    String country;
+    Country country;
     String open;
     String close;
     String name;
@@ -18,7 +18,7 @@ public class Indicator {
         this.src            = jsonObject.getString("src");
         this.identifier     = jsonObject.getString("identifier");
         this.type           = jsonObject.getString("type");
-        this.country        = jsonObject.optString("country", null);
+        this.country        = new Country(jsonObject.optString("country", null), null);
         this.open           = jsonObject.optString("open", null);
         this.close          = jsonObject.optString("close", null);
         this.name           = jsonObject.getString("name");
@@ -40,7 +40,7 @@ public class Indicator {
         return this.type;
     }
 
-    public String country() {
+    public Country country() {
         return this.country;
     }
 
@@ -60,7 +60,7 @@ public class Indicator {
         int pad = 15;
         System.out.println("-Indicator-");
         System.out.println(padRight("Name:", pad)       + this.name());
-        System.out.println(padRight("Country:", pad)    + this.country());
+        System.out.println(padRight("Country:", pad)    + this.country().getCountryCode());
         System.out.println(padRight("Identifier:", pad) + this.identifier());
         System.out.println(padRight("Src:", pad)        + this.src());
         System.out.println(padRight("Type:", pad)       + this.type());

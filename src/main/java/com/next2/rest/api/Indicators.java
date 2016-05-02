@@ -33,7 +33,7 @@ public class Indicators extends Session {
         return this.indicatorList;
     }
 
-    public void getIndicator() {
+    //public void getIndicator() {
         //https://api.test.nordnet.se/api-docs/index.html#!/indicators/get_indicator
-    }
+    //}
 }
