@@ -17,6 +17,10 @@ public class IndicatorList {
         }
     }
 
+    public List<Indicator> toList() {
+        return indicatorList;
+    }
+
     private void add(Indicator indicator) {
         this.indicatorList.add(indicator);
     }
