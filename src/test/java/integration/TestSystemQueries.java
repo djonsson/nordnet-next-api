@@ -1,7 +1,7 @@
 package integration;
 
 import com.next2.rest.api.SystemQueries;
-import com.next2.rest.model.SystemStatusInfo;
+import com.next2.rest.object.SystemStatusInfo;
 import org.junit.Test;
 
 public class TestSystemQueries {

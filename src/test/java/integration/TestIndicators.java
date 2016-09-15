@@ -1,9 +1,9 @@
 package integration;
 
 import com.next2.rest.api.Indicators;
-import com.next2.rest.model.Country;
-import com.next2.rest.model.Indicator;
-import com.next2.rest.model.IndicatorList;
+import com.next2.rest.object.Country;
+import com.next2.rest.object.Indicator;
+import com.next2.rest.object.IndicatorList;
 import org.junit.Test;
 
 import java.util.List;

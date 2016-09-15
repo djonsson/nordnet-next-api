@@ -1,13 +1,12 @@
 package unit;
 
 import com.next2.rest.api.Session;
-import com.next2.rest.model.Login;
+import com.next2.rest.object.Login;
 import com.next2.rest.util.ResourceReader;
 import com.squareup.okhttp.HttpUrl;
 import com.squareup.okhttp.mockwebserver.MockResponse;
 import com.squareup.okhttp.mockwebserver.MockWebServer;
 import helpers.RecordedResponses;
-import org.hamcrest.CoreMatchers;
 import org.json.JSONObject;
 import org.junit.After;
 import org.junit.Before;

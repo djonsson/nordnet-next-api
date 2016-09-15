@@ -1,4 +1,4 @@
-package com.next2.rest.model;
+package com.next2.rest.object;
 
 public class Amount {
     float monetaryValue;

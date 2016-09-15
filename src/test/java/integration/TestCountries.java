@@ -1,8 +1,8 @@
 package integration;
 
 import com.next2.rest.api.Countries;
-import com.next2.rest.model.Country;
-import com.next2.rest.model.CountryList;
+import com.next2.rest.object.Country;
+import com.next2.rest.object.CountryList;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;

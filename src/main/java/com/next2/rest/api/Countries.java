@@ -1,8 +1,7 @@
 package com.next2.rest.api;
 
-import com.next2.rest.model.AccountList;
-import com.next2.rest.model.CountryList;
-import com.next2.rest.model.TTL;
+import com.next2.rest.object.CountryList;
+import com.next2.rest.object.TTL;
 import com.next2.rest.util.RequestHandler;
 import com.next2.rest.util.ResponseHandler;
 import org.apache.log4j.Logger;

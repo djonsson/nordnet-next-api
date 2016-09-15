@@ -1,6 +1,6 @@
 package com.next2.rest.api;
 
-import com.next2.rest.model.Login;
+import com.next2.rest.object.Login;
 import com.next2.rest.util.ResponseHandler;
 import com.next2.rest.util.ResourceReader;
 import org.json.JSONObject;

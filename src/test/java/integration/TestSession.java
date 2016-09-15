@@ -1,7 +1,7 @@
 package integration;
 
 import com.next2.rest.api.Session;
-import com.next2.rest.model.Login;
+import com.next2.rest.object.Login;
 import org.junit.Test;
 import com.next2.rest.util.ResourceReader;
 

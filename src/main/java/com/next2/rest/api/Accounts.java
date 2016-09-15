@@ -1,6 +1,6 @@
 package com.next2.rest.api;
 
-import com.next2.rest.model.*;
+import com.next2.rest.object.*;
 import com.next2.rest.util.RequestHandler;
 import com.next2.rest.util.ResponseHandler;
 import org.apache.log4j.Logger;
@@ -50,7 +50,7 @@ public class Accounts extends Session {
      * @see Account
      * @see AccountList
      *
-     * @return {@link com.next2.rest.model.AccountList}
+     * @return {@link com.next2.rest.object.AccountList}
      */
     public AccountList getUserAccounts() {
         LOG.info("Entering getUserAccounts");
@@ -77,7 +77,7 @@ public class Accounts extends Session {
      * @see Account
      * @see AccountSummary
      *
-     * @return {@link com.next2.rest.model.AccountSummary}
+     * @return {@link com.next2.rest.object.AccountSummary}
      */
     public AccountSummary getAccountSummary(Account account) {
         LOG.info("Entering getAccountSummary");

@@ -1,9 +1,9 @@
 package integration;
 
 import com.next2.rest.api.Accounts;
-import com.next2.rest.model.Account;
-import com.next2.rest.model.AccountList;
-import com.next2.rest.model.Amount;
+import com.next2.rest.object.Account;
+import com.next2.rest.object.AccountList;
+import com.next2.rest.object.Amount;
 import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 

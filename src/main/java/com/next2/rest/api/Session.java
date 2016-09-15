@@ -1,6 +1,6 @@
 package com.next2.rest.api;
 
-import com.next2.rest.model.Login;
+import com.next2.rest.object.Login;
 import org.apache.log4j.Logger;
 import org.glassfish.jersey.client.authentication.HttpAuthenticationFeature;
 import com.next2.rest.util.ResourceReader;
@@ -64,9 +64,9 @@ public class Session {
             if (p == null) {
                 throw new IllegalArgumentException("The property '" + property + "' was not found in the properties file");
             }
-            if (p.isEmpty()) {
-                throw new IllegalArgumentException("The property '" + property + "' was empty in the properties file");
-            }
+            //if (p.isEmpty()) {
+            //    throw new IllegalArgumentException("The property '" + property + "' was empty in the properties file");
+            //}
             log.info(property + ": " + p);
         }
     }

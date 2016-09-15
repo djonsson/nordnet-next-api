@@ -1,7 +1,7 @@
 package com.next2.rest.api;
 
-import com.next2.rest.model.SystemStatusInfo;
-import com.next2.rest.model.TTL;
+import com.next2.rest.object.SystemStatusInfo;
+import com.next2.rest.object.TTL;
 import com.next2.rest.util.RequestHandler;
 import com.next2.rest.util.ResponseHandler;
 import org.apache.log4j.Logger;
