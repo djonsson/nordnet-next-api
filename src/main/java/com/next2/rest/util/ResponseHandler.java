@@ -6,7 +6,7 @@ import javax.ws.rs.core.Response;
 public class ResponseHandler {
 
     final static Logger log = Logger.getLogger(ResponseHandler.class);
-    public final static boolean recordResponse = true;
+    public final static boolean recordResponse = false;
 
     public static JSONObject asJsonObject(Response response) {
         String responseAsString = responseAsString(response);
@@ -39,19 +39,4 @@ public class ResponseHandler {
         log.debug(response.getHeaders());
         log.debug(response.getLocation());
     }
-
-    /**
-     *
-     *       Response response = null;
-     while (response == null || response.getStatus() == 404) {
-     Invocation.Builder req = webTarget.path("accounts1").request(responseType);
-     response = req.get();
-     System.out.println(response.getStatusInfo());
-     try {
-     Thread.sleep(5000);
-     } catch (InterruptedException e) {
-     e.printStackTrace();
-     }
-     }
-     */
 }
